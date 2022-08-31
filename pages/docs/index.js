@@ -36,6 +36,8 @@ export const getStaticProps = async function ({ preview, previewData }) {
         },
       }
     } catch (e) {
+      console.log({e: e})
+
       // return the erros from gitGithubPreviewProps
       return {
         props: {

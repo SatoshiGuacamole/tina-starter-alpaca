@@ -4,11 +4,9 @@ require("dotenv").config()
 
 module.exports = withSvgr({
   webpack: (config) => {
-    config.resolve.fallback = {
-      fs: false,
-      path: false
+    config.node = {
+      fs: "empty",
     }
-
     config.module.rules.push({
       test: /\.md$/,
       use: "raw-loader",
